@@ -1,0 +1,481 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Lilita+One&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Lato", sans-serif;
+}
+/*Colores determinados*/
+:root {
+    --primary-color: #3B0944;
+    --secondary-color: #A12559;
+    --third-color: #F1BBD5;
+    /* Colores para el modo oscuro */
+    --dark-primary-color: #464952;
+    --dark-secondary-color: #f1b1d0;
+    --dark-third-color: #121212;
+    --dark-text-color: #ffffff;
+    --dark-nav-background: #464952;
+}
+/* Estilos para el botón de cambio de modo (modo claro) */
+.mode-toggle-btn {
+  background-color: var(--primary-color);  /* Fondo del botón en modo claro */
+  color: white;  /* Color del texto en modo claro */
+  border: none;
+  border-radius: 30px;  /* Bordes redondeados */
+  padding: 10px 20px;  /* Espaciado interno */
+  font-size: 20px;  /* Tamaño del texto */
+  cursor: pointer;  /* Cambio del cursor a puntero */
+  transition: background-color 0.3s, color 0.3s, transform 0.3s;  /* Transición suave */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Estilos para el icono dentro del botón */
+.mode-toggle-btn i {
+  font-size: 24px;  /* Tamaño del icono */
+  margin-right: 10px;  /* Espacio entre el icono y el texto */
+}
+
+/* Estilos para el botón en modo oscuro */
+body.dark-mode .mode-toggle-btn {
+  background-color: var(--dark-primary-color);  /* Fondo del botón en modo oscuro */
+  color: var(--dark-text-color);  /* Color del texto en modo oscuro */
+}
+
+/* Efecto hover para el botón en modo claro */
+.mode-toggle-btn:hover {
+  background-color: var(--secondary-color);  /* Cambio de fondo al pasar el mouse en modo claro */
+  transform: scale(1.1);  /* Efecto de escala en hover */
+}
+
+/* Efecto hover para el botón en modo oscuro */
+body.dark-mode .mode-toggle-btn:hover {
+  background-color: var(--dark-secondary-color);  /* Cambio de fondo al pasar el mouse en modo oscuro */
+  transform: scale(1.1);  /* Efecto de escala en hover */
+}
+
+/* Estilos por defecto (modo claro) */
+body {
+  background-color: var(--third-color);
+  color: white;
+  font-family: "Lato", sans-serif;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Modo oscuro */
+body.dark-mode {
+  background-color: var(--dark-third-color);
+  color: var(--dark-text-color);
+}
+
+.text-white {
+  color: var(--dark-text-color);
+}
+body.dark-mode .text-white .apellido {
+  color: #f1b1d0; /* Color claro para el modo oscuro */
+}
+
+.header-gradient {
+  background: linear-gradient(to right, var(--primary-color), var(--primary-color));
+}
+
+body.dark-mode .header-gradient {
+  background: linear-gradient(to right, var(--dark-primary-color), var(--dark-primary-color));
+}
+
+.nav-custom {
+  background-color: var(--primary-color);
+}
+
+body.dark-mode .nav-custom {
+  background-color: var(--dark-nav-background);
+}
+
+.nav-link {
+  color: white !important;
+  font-weight: 700;
+  font-size: large;
+}
+
+body.dark-mode .nav-link {
+  color: var(--dark-text-color) !important;
+}
+
+/* Estilo para los iconos sociales en modo oscuro */
+body.dark-mode .social-icon i {
+  color: var(--dark-third-color); /* Color de texto en modo oscuro */
+}
+
+/* Efecto de hover para iconos sociales */
+.social-icon:hover {
+  transform: scale(1.1);
+}
+
+body.dark-mode .social-icon i:hover {
+  transform: scale(1.1); 
+}
+
+body.dark-mode .social-sidebar {
+  background: var(--dark-secondary-color);
+}
+
+.social-icon {
+  background: var(--secondary-color);
+}
+
+body.dark-mode .social-icon {
+  background: var(--dark-secondary-color);
+}
+
+/* Otros elementos como la imagen de perfil y texto */
+.profile-image {
+  border: 15px solid var(--third-color);
+}
+
+body.dark-mode .profile-image {
+  border: 15px solid var(--dark-third-color);
+}
+body.dark-mode .texto {
+  color: var(--dark-text-color); /* Color de texto en modo oscuro */
+  border-bottom: 3px solid var(--dark-secondary-color); /* Color del borde en modo oscuro */
+}
+
+/*Modo Claro*/
+body {
+    background-color: var(--third-color);
+    color: white;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+}
+/*Diseño para pantalla de 1366 x 768 px*/
+.nombre{
+    position: absolute;
+    transform: rotate(270deg);
+    left: -15%;
+    top: -25%;
+    font-weight: 400;
+    font-style: normal;
+}
+.text-white{
+    font-size: 70px;
+}
+.text-white .apellido{
+    color: #A12559;
+    font-weight: 700;
+    font-style: normal;
+}
+.text-secondary-color{
+    font-size: 30px;
+}
+
+.header-gradient {
+    background: linear-gradient(to right, var(--primary-color), var(--primary-color));
+    width: 100%;
+    height: 45vh;
+}
+
+.profile-container {
+    position: relative;
+    margin-top: 3.01rem;
+    display: block;
+}
+.prueba{
+    position: relative;
+    margin-top: -10rem;
+    margin-left: 3rem;
+}
+
+.profile-image {
+    width: 400px; /* Ancho de la imagen */
+    height: 400px; /* Alto de la imagen */
+    border-radius: 50%; /* Hace la imagen redonda */
+    border: 15px solid var(--third-color); /* Borde con un color personalizado */
+    object-fit: cover; /* Ajusta la imagen sin deformarla */
+    margin: 0 auto; /* Centra horizontalmente */
+    display: block; /* Asegura que sea un bloque */
+    background-color: #fff; /* Fondo blanco si hay transparencias */
+    position: relative; /* Permite ajustar con 'top' */
+    top: -20%; /* Ajusta la posición vertical */
+}
+.mitad{
+    margin: 0 auto;
+}
+.col-3 {
+    width: 300px;
+    height: 20px;
+    margin: 8px 0px 8px;
+}
+
+
+.texto {
+    
+    color: var(--primary-color);
+    text-transform: uppercase;
+    margin-top: -3rem;
+    border-bottom: 3px solid var(--secondary-color);
+    text-align: center;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 45px;
+    width: 100%;
+}
+/*Navegador*/
+.navbar-toggler{
+    background-color: var(--third-color);
+    color: var(--secondary-color);
+}
+.navbar-toggler-icon{
+    color: var(--secondary-color);
+}
+
+.nav-custom {
+    background-color: var(--primary-color);  
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    left: 0;
+    border-radius: 30px 30px 0px 0px;
+    min-height: 10%;
+
+}
+.nav-link {
+    color: white !important;
+    text-transform: uppercase;
+    font-weight: 500;
+    padding: 0.8rem 1.5rem !important;
+    transition: color 0.3s;
+    font-weight: 700;
+    font-style: normal;
+    font-size: large;
+}
+
+.nav-link:hover {
+    color: var(--secondary-color) !important;
+}
+
+.social-sidebar {
+    position: fixed;
+    right: 10%;
+    top: 14%;
+    transform: translateY(-50%);
+    z-index: 1000;
+    background: #A12559;
+    padding: 10px;
+    border-radius: 0px 0px 30px 30px;
+}
+
+.social-icon {
+    width: 40px;
+    height: 34px;
+    background: var(--secondary-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    margin: 10px 0;
+    transition: transform 0.3s;
+    text-decoration: none;
+}
+.social-icon i{
+    font-size: 30px;
+}
+
+.social-icon:hover {
+    transform: scale(1.1);
+    color: white;
+}
+/*Responsive para computadores grandes*/
+@media screen and (width: 768px) and (height: 1024px) {
+  /* Estilos para pantallas de al menos 1440px de ancho y 900px de alto */
+  .nav-custom{
+    width: 100%;
+  }
+  .social-sidebar {
+    top: 15%;
+    right: 10%;
+    min-height: 350px;
+  }
+  .social-icon{
+    margin: 20px 0;
+
+  }
+  .nombre{
+    font-weight: 600;
+    top: 10%;
+    left: 5%;
+  }
+  .text-white{
+    font-size: 70px;
+  }
+  .text-secondary-color{
+    font-size: 30px;
+  }
+  .texto{
+    font-size: 4rem;
+    min-width: 400px;
+  }
+  .mitad{
+    width: 100%;
+    margin-left: -5%;
+  }
+  .profile-image{
+    width: 350px;
+    height: 350px;
+    left: 20%;
+    top: 35%;
+  }
+  .nav-link{
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (min-width: 1920px) and (max-width: 2560px) and (min-height: 1080px) and (max-height: 1440px) {
+  /* Estilos para pantallas grandes con relación similar */
+  .nombre{
+    font-weight: 600;
+    
+  }
+  .text-white{
+    font-size: 80px;
+  }
+  .text-secondary-color{
+    font-size: 35px;
+  }
+  .social-sidebar {
+    top: 20%;
+    right: 10%;
+    min-height: 450px;
+    min-width: 70px;
+    border-radius: 0px 0px 40px 40px;
+  }
+  .social-icon{
+    margin: 25px 0;
+    width: 55px;
+    height: 45px;
+  }
+  .profile-image{
+    left: 20px;
+    width: 550px;
+    height: 550px;
+  }
+  .texto{
+    font-size: 4rem;
+    min-width: 400px;
+  }
+  .mitad{
+    width: 120%;
+    margin-left: -5%;
+  }
+  .nav-link{
+    font-size: 1.6rem;
+  }
+}
+/*Tamaños pequeños smarthphone*/
+@media screen and (max-width: 720px) and (orientation: portrait) {
+  /* Estilos para pantallas de ancho máximo 720px en orientación vertical */
+  .nombre{
+    transform: rotate(0deg);
+    top: 8%;
+    left: 20%;
+  }
+  .text-white {
+    font-size: 3.5rem;
+    text-align: center;
+  }
+  .text-secondary-color{
+    font-size: 1.5rem;
+    text-align: left;
+  }
+
+  .social-sidebar {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    top: auto;
+    transform: none;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    background: var(--primary-color);
+    border-radius: 0;
+  }
+
+  .social-icon {
+    margin: 5px;
+    height: 40px;
+  }
+
+
+  .profile-image{
+    top: 42%;
+    right: 30%;
+    width: 350px;
+    height: 350px;
+  }
+  .mitad{
+    width: 100%;
+    height: 100%;
+    margin-left: 3%;
+  }
+  .text-center {
+    margin-top: -5rem;
+    margin-left: 2.75rem;
+  }
+
+  .container-texto {
+    transform: translateY(220px);
+  }
+
+  .texto {
+    font-size: 3rem;
+    text-align: center;
+    width: 300px;
+    margin-left: 10%;
+  }
+  
+  .navbar-toggler{
+    width: 60px;
+    height: 60px;
+  }
+  .navbar-toggler i{
+    font-size: 40px;
+    margin: 0;
+    color: var(--secondary-color);
+  }
+  .nav-link {
+    font-size: 1rem;
+  }
+  .nav-custom{
+    min-height: 40px; 
+    top: 0;
+    bottom: 99%;
+    width: 100%;
+  }
+  #navbarNav {
+    background-color:var(--primary-color); /* Fondo oscuro para el menú desplegable */
+    padding: 2px 0; /* Relleno arriba y abajo para dar espacio */
+    position: relative;
+    z-index: 1050; /* Asegura que el menú aparezca sobre otros elementos */
+    align-items: left;
+  }
+  body.dark-mode #navbarNav{
+    background-color: var(--dark-primary-color);
+  }
+}
+
+
+
+
+
+
+
+
+
+
+  

@@ -1,0 +1,589 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Lilita+One&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Lato", sans-serif;
+}
+/* Section Styles */
+:root {
+    --primary-color: #3B0944;
+    --secondary-color: #A12559;
+    --third-color: #F1BBD5;
+    /* Colores para el modo oscuro */
+    --dark-primary-color: #464952;
+    --dark-secondary-color: #f1b1d0;
+    --dark-third-color: #121212;
+    --dark-text-color: #ffffff;
+    --dark-nav-background: #464952;
+}
+
+/* Estilos para el botón de cambio de modo (modo claro) */
+.mode-toggle-btn {
+    height: 50px;
+    background-color: var(--primary-color);  /* Fondo del botón en modo claro */
+    color: white;  /* Color del texto en modo claro */
+    border: none;
+    border-radius: 30px;  /* Bordes redondeados */
+    padding: 40px 20px;  /* Espaciado interno */
+    font-size: 5rem;  /* Tamaño del texto */
+    cursor: pointer;  /* Cambio del cursor a puntero */
+    transition:  background-color 0.3s, color 0.3s, transform 0.3s;  /* Transición suave */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Estilos para el icono dentro del botón */
+  .mode-toggle-btn i {
+    font-size: 24px;  /* Tamaño del icono */
+    margin-right: 10px;  /* Espacio entre el icono y el texto */
+    color: white;
+  }
+
+  /* Estilo para el modo oscuro */
+body.dark-mode {
+    background-color: var(--dark-third-color);
+    color: var(--dark-text-color);
+}
+
+body.dark-mode .nav-custom {
+    background-color: var(--dark-nav-background);
+}
+
+body.dark-mode .nav-link {
+    color: var(--dark-text-color) !important;
+}
+
+body.dark-mode .mode-toggle-btn {
+    background-color: var(--dark-secondary-color);
+    color: var(--dark-text-color);
+}
+
+
+body.dark-mode .experience-title,
+body.dark-mode .objective-title {
+    color: var(--dark-text-color);
+}
+body.dark-mode .section-title,
+body.dark-mode .section,
+body.dark-mode .section2 {
+    color: var(--dark-text-color);
+    border-bottom:  3px solid var(--dark-secondary-color);
+}
+
+body.dark-mode .description {
+    color: var(--dark-text-color);
+}
+body.dark-mode .profile-section{
+    background: var(--dark-primary-color);
+}
+
+body.dark-mode .experience-item p,
+body.dark-mode .objective-item p {
+    color: var(--dark-primary-color);
+}
+
+body {
+    background-color: var(--third-color);
+    color: var(--primary-color);
+}
+.section-title {
+    color: var(--primary-color);
+    text-align: center;
+    text-transform: uppercase;
+    border-bottom: 3px solid var(--secondary-color);
+    padding-bottom: 0.5rem;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 40px;
+}
+
+.container-content {
+    width: 80%;
+    margin: 0 auto;
+    padding-bottom: 200px;
+    min-height: 70vh;
+}
+
+.section{
+    color: var(--primary-color);
+    text-align: center;
+    text-transform: uppercase;
+    border-bottom: 3px solid var(--secondary-color);
+    padding-bottom: 0.5rem;
+    margin-top: 0.5rem;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 40px;
+    text-align: left;
+}
+.section2{
+    color: var(--primary-color);
+    text-align: center;
+    text-transform: uppercase;
+    border-bottom: 3px solid var(--secondary-color);
+    padding-bottom: 0.5rem;
+    margin-top: 0.5rem;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 40px;
+    text-align: right;
+}
+#roto{
+    height: 200px;
+}
+.profile-section {
+    background-color: var(--primary-color);
+    border-bottom-left-radius: 1000px; /* Hace la mitad del círculo */
+    border-bottom-right-radius: 1000px; /* Hace la mitad del círculo */
+    padding: 1rem;
+    margin: 0;
+    left: 0;
+    width: 100%;
+    max-width: 400px;
+    height: 200px;
+    position: relative;
+    z-index: 1;
+    
+}
+.imagen{
+    padding-top: 10px;
+}
+.text-center{
+    color: var(--third-color);
+    font-weight: 700;
+    font-style: normal;
+    font-size: 42px;
+}
+
+/* Experience and Objectives */
+.experience-item, .objective-item {
+    margin-bottom: 0rem;
+    position: relative;
+    padding-left: 2rem;
+    display: flex;
+    flex-direction: column; /* Coloca los elementos uno debajo del otro */
+}
+.objective-title{
+    text-align: left;
+}
+/* Estilo mejorado para las imágenes como viñetas */
+.señal, .señal2 {
+    width: 25px;
+    height: 25px;
+    object-fit: contain;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 0.5rem;
+}
+
+.experience-item p {
+    font-size: clamp(14px, 2.5vw, 1rem);
+    color: var(--primary-color);
+    font-weight: 600;
+    margin: 0;
+    padding-left: 2.5rem;
+}
+.objective-item p {
+    font-size: clamp(14px, 2.5vw, 1rem);
+    color: var(--primary-color);
+    font-weight: 600;
+    margin: 0;
+    padding-left: 2.5rem;
+}
+/**/
+
+.experience-item:before {
+    content: "";
+    color: var(--accent-color);
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.objective-item:before {
+    content: "";
+    color: var(--accent-color);
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.experience-title, .objective-title {
+    color: var(--primary-color);
+    font-weight: bold;
+    margin-bottom: 0rem;
+    text-transform: uppercase;
+}
+
+
+/* About Me Section */
+.sobre-mi {
+    background-color: var(--light-pink);
+    padding:  15px;
+    height: 30%;
+}
+
+.description {
+    font-size: 1.2rem;
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 0rem;
+    margin: 0 auto;
+    font-weight: 400;
+    font-style: normal;
+}
+/*Navegador*/
+.nav-custom {
+    background-color: var(--primary-color);
+    width: 100%;
+    border-radius: 0px 0px 30px 30px;
+}
+
+.nav-link {
+    color: white !important;
+    text-transform: uppercase;
+    font-weight: 500;
+    transition: color 0.5s;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 1rem;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.nav-link:hover {
+    color: var(--secondary-color) !important;
+}
+
+/*Navegador*/
+.navbar-toggler{
+    background-color: var(--third-color);
+    color: var(--secondary-color);
+}
+.navbar-toggler-icon{
+    color: var(--secondary-color);
+}
+
+/* */
+@media screen and (min-width: 1600px) {
+
+    .profile-section {
+        max-width: 600px; /* Aún más ancho */
+        height: 300px; /* Aún más alto */
+    }
+    
+    .text-center {
+        font-size: 65px;
+    }
+    
+    .section-title {
+        font-size: 56px;
+        margin-top: 6rem;
+    }
+    
+    body {
+        font-size: 18px; /* Texto base más grande */
+    }
+}
+
+@media screen and (min-width: 1920px) {
+    .container-content {
+        width: 85%;
+        margin: 0 auto;
+    }
+    .description{
+        font-size: 2rem;
+        padding-top: 10px;
+    }
+    .profile-section {
+        max-width: 600px;
+        height: 250px;
+        top: 10%;
+
+    }
+    #roto{
+        padding-top: 2%;
+    }
+    .objective-title,.experience-title{
+        font-size: 1.8rem;
+        font-weight: 900;
+    }
+    .objective-item p, .experience-item p{
+        padding:10px;
+        font-size: 1.6rem;
+    }
+    
+    .text-center {
+        padding-top: 0.5rem;
+        font-size: 50px;
+    }
+    
+    .section-title {
+        font-size: 64px;
+        margin-top: 1rem;
+    }
+    
+    body {
+        font-size: 20px;
+    }
+    
+    .nav-custom {
+        padding: 0.5rem 0.5rem;
+        height: 15%;
+    }
+    
+    .nav-link {
+        font-size: 1.5rem;
+        padding: 1.2rem 2.5rem !important;
+        justify-content: space-around;
+        text-align: center;
+    }
+}
+
+
+
+
+/* Media Queries para responsividad */
+@media screen and (max-width: 768px) {
+    .objective-title,.experience-title{
+        font-size: 1rem;
+        font-weight: 900;
+    }
+    .section{
+        font-size: 2rem;
+    }
+    .section2{
+        font-size: 2rem;
+    }
+    .section-title {
+        font-size: 2rem;
+        margin-top: 1rem;
+    }
+    .objective-item , .experience-item {
+        padding:5px;
+        font-size: 1.2rem;
+    }
+    .objective-item p, .experience-item p{
+        padding: 6px;
+        font-size: 1.2rem;
+    }
+    .profile-section {
+        max-width: 90%; /* En pantallas más pequeñas ocupa el 90% del ancho */
+        height: auto; /* Altura automática para adaptarse al contenido */
+        min-height: 100px; /* Altura mínima para mantener la forma */
+        width: 100%;
+        border-bottom-left-radius: 500px; /* Hace la mitad del círculo */
+        border-bottom-right-radius: 500px; /* Hace la mitad del círculo */
+        margin: 10px auto;
+    }
+    #roto{
+        height: 350px;
+    }
+    
+    .text-center {
+        font-size: 1.2rem; /* Texto más pequeño en móviles */
+    }
+    .nav-custom {
+        padding: 0.5rem;
+    }
+    
+    .nav-link {
+        padding: 0.5rem 1rem !important;
+        font-size: medium;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    #roto{
+        height: 600px;
+        padding: 40px 0;
+    }
+    .profile-section {
+        max-width: 95%; /* En móviles ocupa casi todo el ancho */
+        border-radius: 10px;
+    }
+    
+    .text-center {
+        font-size: 28px; /* Texto aún más pequeño en móviles pequeños */
+    }
+    .description{
+        font-size: 1.5rem;
+    }
+    .section{
+        font-size: 2rem;
+    }
+    .section-title {
+        font-size: 2rem;
+        margin-top: 1rem;
+    }
+    .objective-title,.experience-title{
+        font-size: 1.5rem;
+        font-weight: 900;
+    }
+    .objective-item p, .experience-item p{
+        padding:10px;
+        font-size: 1.2rem;
+    }
+    
+}
+@media screen and (max-width: 375px) and (max-height: 667px) {
+    #roto {
+        height: 650px; /* Ajuste más compacto para pantallas pequeñas */
+        padding: 0;
+    }
+
+    .profile-section {
+        max-width: 90%; /* Reduce aún más el ancho para adaptarse a pantallas estrechas */
+        border-radius: 8px; /* Bordes más suaves */
+        padding: 20px;
+        margin-top: 10%;
+    }
+
+    .text-center {
+        font-size: 24px; /* Texto más pequeño y legible */
+        text-align: center;
+    }
+
+    .section-title {
+        font-size: 28px; /* Títulos ligeramente más pequeños */
+        margin-top: 1.5rem; /* Margen reducido */
+        text-align: center; /* Centrado en pantallas pequeñas */
+    }
+
+    .social-sidebar {
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        background: var(--primary-color);
+        border-radius: 0;
+        padding: 10px 0;
+    }
+
+    .social-icon {
+        width: 35px;
+        height: 35px;
+        margin: 5px;
+    }
+
+    .profile-image {
+        width: 280px;
+        height: 280px;
+        margin: 0 auto;
+        top: 20%;
+    }
+
+    .nav-link {
+        font-size: 14px;
+        padding: 0.5rem;
+    }
+}
+
+
+
+
+
+
+
+/*Habilidades*/
+body.dark-mode .skills-container {
+    background-color: var(--dark-third-color);
+    border-radius: 15px;
+}
+
+body.dark-mode .text-habil {
+    color: var(--dark-text-color);
+    border-bottom: 4px solid var(--dark-secondary-color);
+}
+
+body.dark-mode .skill-item p {
+    color: var(--dark-secondary-color);
+}
+
+body.dark-mode .skills-image {
+    filter: brightness(0.9);
+}
+
+.skills-container {
+    background-color: var(--third-color);
+    border-radius: 15px;
+}
+
+.skill-icon {
+
+    margin-right: 10px;
+}
+.text-habil{
+    color: var(--primary-color);
+    margin: 0.5rem 0 2rem !important;
+    border-bottom: 4px solid var(--secondary-color);
+    font-weight: 700;
+    font-style: normal;
+    font-size: 50px;
+    
+}
+.title{
+    font-weight: 700;
+    font-style: normal;
+    font-size: 30px;
+    margin: 0 !important;
+}
+
+.skill-item {
+    
+    margin-bottom: 5px;
+    padding:6px;
+    border-radius: 0 10px 10px 0;
+}
+.skill-item p{
+    color: var(--primary-color);
+    font-weight: 400;
+    font-style: normal;
+    font-size: 25px;
+}
+
+.skills-image {
+    padding: 30px;
+    max-width: 400px;
+    width: 100%;
+    height: auto;
+}
+.container-contenedor{
+    width: 80%;
+    margin: 0 auto;
+}
+@media screen and (min-width: 1920px) and (max-width: 2560px) and (min-height: 1080px) and (max-height: 1440px) {
+    .skills-container {
+        padding: 20px;
+        border-radius: 20px;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .text-habil {
+        font-size: 50px;
+    }
+
+    .title {
+        font-size: 35px;
+    }
+
+    .skill-item {
+        margin-bottom: 10px;
+        padding: 10px;
+        border-radius: 0 15px 15px 0;
+    }
+
+    .skill-item p {
+        margin-top: 1rem;
+        font-size: 30px;
+    }
+
+    .skills-image {
+        max-width: 400px;
+    }
+}

@@ -1,0 +1,240 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Lilita+One&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Lato", sans-serif;
+}
+/* Section Styles */
+:root {
+    --primary-color: #3B0944;
+    --secondary-color: #A12559;
+    --third-color: #F1BBD5;
+    /* Colores para el modo oscuro */
+    --dark-primary-color: #464952;
+    --dark-secondary-color: #f1b1d0;
+    --dark-third-color: #121212;
+    --dark-text-color: #ffffff;
+    --dark-nav-background: #464952;
+}
+
+
+
+/* Estilos para el botón de cambio de modo (modo claro) */
+.mode-toggle-btn {
+    background-color: var(--primary-color);  /* Fondo del botón en modo claro */
+    color: white;  /* Color del texto en modo claro */
+    border: none;
+    border-radius: 30px;  /* Bordes redondeados */
+    padding: 10px 20px;  /* Espaciado interno */
+    font-size: 20px;  /* Tamaño del texto */
+    cursor: pointer;  /* Cambio del cursor a puntero */
+    transition: background-color 0.3s, color 0.3s, transform 0.3s;  /* Transición suave */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+  
+/* Estilos para el icono dentro del botón */
+.mode-toggle-btn i {
+font-size: 24px;  /* Tamaño del icono */
+margin-right: 10px;  /* Espacio entre el icono y el texto */
+}
+
+/* Estilos para el botón en modo oscuro */
+body.dark-mode .mode-toggle-btn {
+background-color: var(--dark-primary-color);  /* Fondo del botón en modo oscuro */
+color: var(--dark-text-color);  /* Color del texto en modo oscuro */
+}
+
+/* Efecto hover para el botón en modo claro */
+.mode-toggle-btn:hover {
+background-color: var(--secondary-color);  /* Cambio de fondo al pasar el mouse en modo claro */
+transform: scale(1.1);  /* Efecto de escala en hover */
+}
+
+/* Efecto hover para el botón en modo oscuro */
+body.dark-mode .mode-toggle-btn:hover {
+background-color: var(--dark-third-color);  /* Cambio de fondo al pasar el mouse en modo oscuro */
+transform: scale(1.1);  /* Efecto de escala en hover */
+}
+
+
+
+
+body.dark-mode{
+    background-color: var(--dark-third-color) !important;
+    color: var(--dark-text-color);
+}
+body.dark-mode .nav-custom {
+    background-color: var(--dark-nav-background); /* Fondo oscuro para el navbar */
+}
+
+body.dark-mode .nav-link {
+    color: var(--dark-text-color); /* Color del texto en modo oscuro */
+}
+
+body.dark-mode .nav-link:hover {
+    color: var(--dark-secondary-color); /* Color del texto en hover */
+}
+
+body.dark-mode .main-title{
+    color: var(--dark-text-color);
+    border-bottom: 4px solid var(--dark-secondary-color);
+}
+body.dark-mode .hobby-circle{
+    border: 10px solid var(--dark-secondary-color);
+    background-color: var(--dark-third-color);
+}
+body.dark-mode .hobby-circle2{
+    border: 10px solid var(--dark-nav-background);
+    background-color: var(--dark-third-color);
+}
+body.dark-mode .hobby-name{
+    color: var(--dark-text-color);
+}
+
+
+
+
+body {
+    background-color: var(--third-color);
+    color: var(--primary-color);
+}
+
+/*Navegador*/
+.nav-custom {
+    background-color: var(--primary-color);
+    width: 100%;
+    border-radius: 0px 0px 30px 30px;
+    padding: 0.5rem 0.5rem;
+    height: 126px;
+}
+
+.nav-link {
+    color: white !important;
+    text-transform: uppercase;
+    font-weight: 500;
+    transition: color 0.3s;
+    font-weight: bolder !important;
+    font-style: normal;
+    font-size: 24px !important;
+    justify-content: space-around;
+    padding: 20px 40px !important;
+    text-align: center;
+}
+
+.nav-link:hover {
+    color: var(--secondary-color) !important;
+}
+/*Navegador*/
+.navbar-toggler{
+    background-color: var(--third-color)!important;
+    color: var(--secondary-color)!important;
+}
+.navbar-toggler-icon{
+    color: var(--secondary-color);
+}
+.container-contenidoa{
+    width: 80%;
+    margin: 0 auto;
+    min-height: 40vh;
+}
+.main-title {
+    text-align: center;
+    color: var(--primary-color);
+    margin: 2rem 0 2rem !important;
+    border-bottom: 4px solid var(--secondary-color);
+    font-weight: 700;
+    font-style: normal;
+    font-size: 50px;
+}
+
+.hobbies-container {
+    padding: 1rem;
+    width: 100%;
+}
+
+.hobby-item {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.hobby-circle {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    border: 10px solid var(--secondary-color);
+    background-color: var(--third-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 0.5rem;
+    transition: transform 0.3s ease;
+}
+.hobby-circle2 {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    border: 10px solid var(--primary-color);
+    background-color: var(--third-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 0.5rem;
+    transition: transform 0.3s ease;
+}
+
+.hobby-circle:hover {
+    transform: scale(1.1);
+}
+.hobby-circle2:hover {
+    transform: scale(1.1);
+}
+
+.hobby-icon {
+    width: 60%;
+    height: 60%;
+}
+
+.hobby-name {
+    color: var(--primary-color);
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+@media (max-width: 768px) {
+    .container-contenidoa{
+        margin: 10px auto !important;
+    }
+
+    .main-title{
+        font-size: 35px;
+        padding-bottom: 5%;
+    }
+    .hobby-circle {
+        width: 150px;
+        height: 150px;
+    }
+    .hobby-circle2 {
+        width: 150px;
+        height: 150px;
+    }
+
+    .hobby-icon {
+        font-size: 2rem;
+    }
+    .hobby-name{
+        font-size: 1.5rem;
+    }
+    #navbarNav {
+        background-color:var(--primary-color); /* Fondo oscuro para el menú desplegable */
+        padding: 2px 0; /* Relleno arriba y abajo para dar espacio */
+        position: relative;
+        z-index: 1050; /* Asegura que el menú aparezca sobre otros elementos */
+        align-items: left;
+    }
+    body.dark-mode #navbarNav{
+        background-color: var(--dark-primary-color);
+    }
+}

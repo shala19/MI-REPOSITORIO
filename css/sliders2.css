@@ -1,0 +1,326 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Lilita+One&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Lato", sans-serif;
+}
+:root {
+    --primary-color: #3B0944;
+    --secondary-color: #A12559;
+    --third-color: #F1BBD5;
+    /* Colores para el modo oscuro */
+    --dark-primary-color: #464952;
+    --dark-secondary-color: #f1b1d0;
+    --dark-third-color: #121212;
+    --dark-text-color: #ffffff;
+    --dark-nav-background: #464952;
+}
+/* Estilos para el botón de cambio de modo (modo claro) */
+.mode-toggle-btn {
+    background-color: var(--primary-color);  /* Fondo del botón en modo claro */
+    color: white;  /* Color del texto en modo claro */
+    border: none;
+    border-radius: 30px;  /* Bordes redondeados */
+    padding: 10px 20px;  /* Espaciado interno */
+    font-size: 20px;  /* Tamaño del texto */
+    cursor: pointer;  /* Cambio del cursor a puntero */
+    transition: background-color 0.3s, color 0.3s, transform 0.3s;  /* Transición suave */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+  
+/* Estilos para el icono dentro del botón */
+.mode-toggle-btn i {
+font-size: 24px;  /* Tamaño del icono */
+margin-right: 10px;  /* Espacio entre el icono y el texto */
+}
+
+/* Estilos para el botón en modo oscuro */
+body.dark-mode .mode-toggle-btn {
+background-color: var(--dark-primary-color);  /* Fondo del botón en modo oscuro */
+color: var(--dark-text-color);  /* Color del texto en modo oscuro */
+}
+
+/* Efecto hover para el botón en modo claro */
+.mode-toggle-btn:hover {
+background-color: var(--secondary-color);  /* Cambio de fondo al pasar el mouse en modo claro */
+transform: scale(1.1);  /* Efecto de escala en hover */
+}
+
+/* Efecto hover para el botón en modo oscuro */
+body.dark-mode .mode-toggle-btn:hover {
+background-color: var(--dark-third-color);  /* Cambio de fondo al pasar el mouse en modo oscuro */
+transform: scale(1.1);  /* Efecto de escala en hover */
+}
+
+
+
+
+body.dark-mode{
+    background-color: var(--dark-third-color) !important;
+    color: var(--dark-text-color);
+}
+body.dark-mode .nav-custom {
+    background-color: var(--dark-nav-background); /* Fondo oscuro para el navbar */
+}
+
+body.dark-mode .nav-link {
+    color: var(--dark-text-color); /* Color del texto en modo oscuro */
+}
+
+body.dark-mode .nav-link:hover {
+    color: var(--dark-secondary-color); /* Color del texto en hover */
+}
+body.dark-mode .text-habil {
+    color: var(--dark-text-color); /* Color de texto en modo oscuro */
+    border-bottom: 4px solid var(--dark-secondary-color); /* Color del borde en modo oscuro */
+}
+body.dark-mode .estudios {
+    background-color: var(--dark-third-color); /* Fondo oscuro para los proyectos */
+}
+body.dark-mode .vertical-text {
+    background-color: var(--dark-primary-color); /* Fondo oscuro para el texto vertical */
+    color: var(--dark-text-color); /* Color de texto en modo oscuro */
+}
+body.dark-mode #boton {
+    background-color: var(--dark-primary-color); /* Fondo oscuro para el botón */
+    color: var(--dark-text-color); /* Color del texto en modo oscuro */
+}
+body.dark-mode .close-btn{
+    color: var(--dark-secondary-color);
+} 
+body.dark-mode .sidebar {
+    background-color: var(--dark-primary-color); /* Fondo oscuro para el sidebar */
+}
+body.dark-mode .carousel-control-prev-icon,
+body.dark-mode .carousel-control-next-icon {
+    background-color: var(--dark-primary-color); /* Fondo oscuro para los botones */
+}
+body.dark-mode .prev,
+body.dark-mode .next {
+    background-color: rgba(255, 255, 255, 0.5); /* Botones del carrusel en modo oscuro */
+}
+body.dark-mode .project-title {
+    color: var(--dark-text-color); /* Títulos de proyectos en modo oscuro */
+}
+body.dark-mode .project-title a {
+    color: var(--dark-text-color); /* Enlaces de proyectos en modo oscuro */
+}
+body.dark-mode .project-year {
+    color: var(--dark-secondary-color); /* Año de proyecto en modo oscuro */
+}
+body.dark-mode .project-description {
+    color: var(--dark-secondary-color); /* Descripción del proyecto en modo oscuro */
+}
+
+
+
+body {
+    background-color: var(--third-color);
+    color: var(--primary-color);
+    font-family: "Lato", sans-serif;
+}
+.nav-custom {
+    background-color: var(--primary-color);
+    width: 100%;
+    border-radius: 0px 0px 30px 30px;
+    padding: 0.5rem 0.5rem;
+    height: 126px;
+}
+
+.nav-link {
+    color: white !important;
+    text-transform: uppercase;
+    font-weight: 500;
+    transition: color 0.3s;
+    font-weight: bolder !important;
+    font-style: normal;
+    font-size: 24px !important;
+    justify-content: space-around;
+    padding: 20px 40px !important;
+    text-align: center;
+}
+
+.nav-link:hover {
+    color: var(--secondary-color) !important;
+}
+/*Navegador*/
+.navbar-toggler{
+    background-color: var(--third-color)!important;
+    color: var(--secondary-color)!important;
+}
+.navbar-toggler-icon{
+    color: var(--secondary-color);
+}
+.text-habil{
+    color: var(--primary-color);
+    margin: 0.5rem 0 2rem !important;
+    border-bottom: 4px solid var(--secondary-color);
+    font-weight: 700;
+    font-style: normal;
+    font-size: 50px;
+    
+}
+.container-estudios{
+    width: 80%;
+        margin: 0 auto;
+}
+.estudios {
+    background-color: var(--third-color);
+    border-radius: 15px;
+    top: 50%;
+}
+.vertical-text {
+    position: absolute;
+    left: 0;
+    top: 25%;
+    bottom: 0;
+    width: 60px;
+    height: 50%;
+    background-color: var(--primary-color);
+    color: var(--third-color);
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    transform: rotate(180deg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px 0 0 20px;
+}
+.project-title {
+    color: var(--primary-color);
+    font-weight: bold;
+    font-size: 2.4rem;
+}
+
+.project-year {
+    color: var(--secondary-color);
+    font-weight: bold;
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.project-description {
+    font-size: 2rem;
+    color:var(--primary-color);
+}
+/* Botón para abrir el panel */
+#boton {
+    position: fixed;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: var(--primary-color);
+    color: var(--third-color);
+    font-size: 2rem;
+    font-weight: bolder;
+    padding: 5px 20px;
+    border: none;
+    border-radius: 0 10px 10px 0;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+/* Panel lateral */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: -100%; /* Panel oculto inicialmente */
+    width: 100%;
+    height: 100%;
+    background-color: var(--secondary-color);
+    box-shadow: 5px 0 15px rgba(0, 0, 0, 0.3);
+    transition: left 0.3s ease-in-out; /* Transición suave */
+    z-index: 999;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    overflow-y: auto; /* Permite desplazamiento si el contenido es largo */
+}
+
+/* Botón para cerrar el panel */
+.close-btn {
+    background: none;
+    border: none;
+    color: var(--primary-color);
+    font-size: 5rem;
+    align-self: flex;
+    cursor: pointer;
+}
+
+/* Carrusel */
+.carousel-inner img {
+    margin-top: 10%;
+    width: 100%;
+    height: auto;
+    max-height: 500px; /* Asegura que las imágenes no sean demasiado grandes */
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: var(--primary-color); /* Color personalizado para los botones */
+    width: 40px; /* Ancho del ícono */
+    height: 40px; /* Alto del ícono */
+    border-radius: 50%; /* Hacerlos redondos */
+    color: #3B0944;
+}
+
+/* Ajustes generales del carrusel */
+.carousel-item img {
+    margin-left: 0;
+    object-fit: contain; /* Hace que las imágenes cubran todo el área sin deformarse */
+}
+
+.carousel {
+    margin-top: 20px;
+}
+
+/* Estilo para textos */
+.text-habil {
+    color: var(--primary-color);
+    margin: 0.5rem 0 2rem !important;
+    border-bottom: 4px solid var(--secondary-color);
+    font-weight: 700;
+    font-style: normal;
+    font-size: 50px;
+}
+@media screen and (min-width: 768px) and (max-height: 1024px) {
+    /* Estilos para pantallas de al menos 1440px de ancho y 900px de alto */
+    .nav-custom{
+        width: 100%;
+    }
+    #navbarNav {
+        background-color:var(--primary-color); /* Fondo oscuro para el menú desplegable */
+        padding: 2px 0; /* Relleno arriba y abajo para dar espacio */
+        position: relative;
+        z-index: 1050; /* Asegura que el menú aparezca sobre otros elementos */
+        align-items: left;
+    }
+    body.dark-mode #navbarNav{
+        background-color: var(--dark-primary-color);
+    }
+}
+
+/* Ajustes responsivos */
+@media screen and (max-width: 720px) and (orientation: portrait) {
+    #boton {
+        font-size: 1.5rem;
+        padding: 5px 10px;
+    }
+
+    .carousel-inner img {
+        max-height: 300px; /* Ajusta la altura de las imágenes en pantallas pequeñas */
+    }
+    #navbarNav {
+        background-color:var(--primary-color); /* Fondo oscuro para el menú desplegable */
+        padding: 2px 0; /* Relleno arriba y abajo para dar espacio */
+        position: relative;
+        z-index: 1050; /* Asegura que el menú aparezca sobre otros elementos */
+        align-items: left;
+    }
+    body.dark-mode #navbarNav{
+        background-color: var(--dark-primary-color);
+    }
+}

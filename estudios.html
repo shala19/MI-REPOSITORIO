@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estudios</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="css/sliders2.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg nav-custom">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="perfil.html">Perfil Profesional</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="hablidades.html">Habilidades</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="proyectos.html">Proyectos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="estudios.html">Estudios</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="aficiones.html">Aficiones</a>
+                    </li>
+                    <button id="mode-toggle" class="mode-toggle-btn">
+                        <i id="mode-icon" class="fas fa-sun"></i>
+                    </button>
+                </ul>
+            </div>
+        </div>
+    </nav>
+     <!-- Contenido Principal -->
+    <div class="container-estudios py-4">
+        <div class="row estudios p-4">
+            <h1 class="text-habil mb-5" >ESTUDIOS</h1>
+            <div class="vertical-text">
+                <button id="boton" onclick="abrir()">VISUALIZACIÓN</button>
+            </div>
+            <div class="sidebar">
+                <button class="close-btn" onclick="cerrar()">×</button>
+                <div id="carouselExampleIndicators" class="carousel slide">
+                    <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    </div>
+                    <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="img/titulo.png" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="img/titulo2.png" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="img/titulo3.png" class="d-block w-100" alt="...">
+                    </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>  
+            <div class="col-md-6">
+                <div class="mb-4">
+                    <div class="project-year"data-aos="zoom-in" data-aos-duration="2500">2023- AHORA</div>
+                    <div class="project-title"><img src="img/Vector 2.png" class="skill-icon">TECNÓLOGO EN ANÁLISIS Y DESARROLLO DE SOFTWARE</div>
+                    <p class="project-description">
+                        Formación en análisis de requerimientos, diseño de sistemas y desarrollo de aplicaciones utilizando diversos lenguajes de programación y metodologías ágiles.
+                    </p>
+                </div>
+
+                <div class="mb-4">
+                    <div class="project-year"data-aos="zoom-in" data-aos-duration="2500">2021-2022</div>
+                    <div class="project-title"><img src="img/Vector 2.png" class="skill-icon">CURSO DE DISEÑO DE INTERFACES</div>
+                    <p class="project-description">
+                        Diseño de interfaces intuitivas y responsivas utilizando herramientas como Figma y Adobe XD.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Columna Derecha -->
+            <div class="col-md-6">
+                <div class="mb-4">
+                    <div class="project-year"data-aos="zoom-in" data-aos-duration="2500">2020</div>
+                    <div class="project-title"><img src="img/Vector 2.png" class="skill-icon">CURSO DE GIT Y CONTROL DE VERSIONES</div>
+                    <p class="project-description">
+                        Aprendizaje de Git para gestionar versiones de código, incluyendo la creación de repositorios Y manejo de ramas.
+                    </p>
+                </div>
+
+                <div class="mb-4">
+                    <div class="project-year"data-aos="zoom-in" data-aos-duration="2500">2018-2019</div>
+                    <div class="project-title"><img src="img/Vector 2.png" class="skill-icon">FUNDAMENTOS DE PROGRAMACIÓN</div>
+                    <p class="project-description">
+                        Introducción a conceptos básicos de programación como variables, estructuras de control y algoritmos, utilizando lenguajes como Python o JavaScript.
+                    </p>
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+    <script src="js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+</html>
